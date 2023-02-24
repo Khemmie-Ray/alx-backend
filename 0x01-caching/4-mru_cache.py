@@ -12,7 +12,7 @@ class MRUCache(BaseCaching):
     Implementation of MRU(Most Recently Used) Cache
     """
     def __init__(self):
-        """ 
+        """
         Init method
         """
         super().__init__()
@@ -20,7 +20,7 @@ class MRUCache(BaseCaching):
         self.__rlock = RLock()
 
     def put(self, key, item):
-        """ 
+        """
         Add an item in the cache
         """
         if key is not None and item is not None:
@@ -31,7 +31,7 @@ class MRUCache(BaseCaching):
                 print('DISCARD: {}'.format(keyOut))
 
     def get(self, key):
-        """ 
+        """
         Get an item by key
         """
         with self.__rlock:
