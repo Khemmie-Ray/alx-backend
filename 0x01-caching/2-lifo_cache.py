@@ -12,7 +12,7 @@ class LIFOCache(BaseCaching):
     An implementation of LIFO(Last In Fisrt Out) Cache
     """
     def __init__(self):
-        """ 
+        """
         Init method
         """
         super().__init__()
@@ -20,7 +20,7 @@ class LIFOCache(BaseCaching):
         self.__rlock = RLock()
 
     def put(self, key, item):
-        """ 
+        """
         Add an item in the cache
         """
         if key is not None and item is not None:
@@ -38,7 +38,7 @@ class LIFOCache(BaseCaching):
             return self.cache_data.get(key, None)
 
     def _balance(self, keyIn):
-        """ 
+        """
         Removes the earliest item from the cache at MAX size
         """
         keyOut = None
